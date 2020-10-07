@@ -8,13 +8,15 @@ import firebase from "./firebase";
 import rootReducer from './reducers/index';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import 'firebase/auth';
 
 const store = createStore(rootReducer, { displayStateReducer: { display: 'NEIGHBOR_LIST', selectedNeighbor: null }});
 
 const rrfProps = {
   firebase,
   config: {
-        userProfile: "users"
+        userProfile: "users",
+        useFirestoreForProfile: true,
     },
   dispatch: store.dispatch,
   createFirestoreInstance
