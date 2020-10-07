@@ -6,36 +6,32 @@ import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 import CardColumns from 'react-bootstrap/CardColumns';
 
 
-function NeighborList(props){
-  // const bodyStyle = {
-  //   fontFamily: 'helvetica',
-    
-  // }
-  console.log("quiz list being displayed")
+
+function NeighborList(props) {
+  
+  
   useFirestoreConnect([
     { collection: 'neighbors' }
   ]);
 
   const neighbors = useSelector(state => state.firestore.ordered.neighbors);//this is a hook!
 
-  if(isLoaded(neighbors)) {
+  if (isLoaded(neighbors)) {
     return (
       <React.Fragment>
-          {/* <div className="container" > */}
           <CardColumns>
-                {neighbors.map((neighbor) => {
-                  return <Neighbor
-                    whenNeighborClicked = { props.onNeighborSelection }
-                    name = {neighbor.name} 
-                    address = {neighbor.address} 
-                    city = {neighbor.city}
-                    email = {neighbor.email}
-                    tools = {neighbor.tools}
-                    id = {neighbor.id}
-                    key = {neighbor.id}/>
-                })}
-            </CardColumns>
-        {/* </div> */}
+            {neighbors.map((neighbor) => {
+              return <Neighbor
+                whenNeighborClicked={props.onNeighborSelection}
+                name={neighbor.name}
+                address={neighbor.address}
+                city={neighbor.city}
+                email={neighbor.email}
+                tools={neighbor.tools}
+                id={neighbor.id}
+                key={neighbor.id} />
+            })}
+          </CardColumns>
       </React.Fragment>
     )
   } else {

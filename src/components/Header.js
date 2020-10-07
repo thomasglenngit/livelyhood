@@ -8,11 +8,13 @@ import * as a from '../actions/index';
 import { useDispatch } from 'react-redux';
 
 function Header() {
+
+
   const headerStyle = {
     fontFamily: 'sans-serif',
     textAlign: 'center',
-    backgroundColor: 'lavender',
-    paddingTop: '50px',
+    // backgroundColor: 'lavender',
+    // paddingTop: '50px',
     paddingBottom: '50px',
     marginBottom: '10px'
   }
@@ -21,7 +23,8 @@ function Header() {
     fontWeight: 'bold'
   }
   const img = {
-    maxWidth: '947px',
+    width: '100%',
+    // maxWidth: '947px',
     // maxHeight: '450px', 
     // paddingLeft: '50%'
   }

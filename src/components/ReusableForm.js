@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { Form } from 'react-bootstrap';
 // import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 
 function NeighborForm(props) {
@@ -15,8 +16,16 @@ function NeighborForm(props) {
     ({ name, address, city, email, tools } = props);
   }
 
+  const bodyStyle = {
+    // backgroundColor: 'black',
+    color: 'Black',
+    minHeight: '100vh',
+    padding: '20px',
+  }
+
   return (
     <React.Fragment>
+      <Container fluid style={bodyStyle}>
         <Form onSubmit={props.formSubmission}>
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>
@@ -39,13 +48,16 @@ function NeighborForm(props) {
                 <Form.Control type='text' placeholder="Enter tools" defaultValue={tools} />
               </Form.Group>
             <button className='mb-3' variant='success' type="submit" size='lg' block>Add New Neighbor</button>
+            {/* <button className='mb-3' variant='success' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back</button> */}
         </Form>
+        </Container>
     </React.Fragment>
   )
 }
 
 NeighborForm.propTypes = {
-  originalNeighbor: PropTypes.object
+  originalNeighbor: PropTypes.object,
+  // onLinkClick: PropTypes.func
 }
 
 export default NeighborForm;
