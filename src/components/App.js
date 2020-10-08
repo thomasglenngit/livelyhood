@@ -109,6 +109,8 @@ class App extends React.Component {
         color: 'Black',
         minHeight: '100vh',
         padding: '20px',
+        backgroundColor: 'green',
+        
       }
       console.log(displayComponent)
       return (

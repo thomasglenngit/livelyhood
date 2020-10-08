@@ -16,7 +16,7 @@ function Header() {
     // backgroundColor: 'lavender',
     // paddingTop: '50px',
     paddingBottom: '50px',
-    marginBottom: '10px'
+    marginBottom: '20px'
   }
   const h1Header = {
     color: 'black',
@@ -24,6 +24,7 @@ function Header() {
   }
   const img = {
     width: '100%',
+    height: 'auto'
     // maxWidth: '947px',
     // maxHeight: '450px', 
     // paddingLeft: '50%'
