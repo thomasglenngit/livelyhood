@@ -25,9 +25,6 @@ function Header() {
   const img = {
     width: '100%',
     height: 'auto'
-    // maxWidth: '947px',
-    // maxHeight: '450px', 
-    // paddingLeft: '50%'
   }
 
   const buttonStyle = {
