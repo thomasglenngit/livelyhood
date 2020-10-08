@@ -5,6 +5,7 @@
 
 ## _Name of Student_: Thomas Glenn
 
+
 ## _Name of Project_: "LIVELIHOOD" - A Neighborhood Emergency Response Team Application
 
 ### Project’s Purpose or Goal: 
@@ -44,12 +45,14 @@
 		
 # File Tree
 
+<img src="src/images/FileTree.png" style="float: left; margin-right: 10px;" />
+
 use this as reference for markdown:  
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 src/  
 
-  `_tests_/reducers`  
+  actions
 
     display-state-reducer-test.js
 
@@ -168,4 +171,5 @@ Is there anything else you’d like your instructor to know?
 * I have changed my mind, choosing now to build this program using React.JS, instead of C# ASP.Net MVC, simply because, long term, I intend to build this project into a mobile iOS appliction. I feel there is more mobile accessibility using REACT. Am I wrong about this? I also feel that, whether I use React.JS or .Net, I am jumping into the "deep end" no matter what. So, I might as well learn as much as I can. 
 * I love code.
 
-## Additional Resources
+
+<img src="src/images/Good_Vibes.gif" style="float: left; margin-right: 10px;" />
