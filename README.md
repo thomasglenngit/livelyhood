@@ -12,7 +12,7 @@
 * an application to bring neighbors together and serve one another during natural disasters/crises. 
 
 ### Execution:
-* Users would sign up to offer help in the NERT program (Neighborhood Emergency Response Team) 
+* Volunteers would sign up to offer help in the NERT program (Neighborhood Emergency Response Team) 
 * Those in need would post messages to a NERT community board.
 * Respondents would offer resources that they could deliver during a disaster. 
 
@@ -21,6 +21,13 @@
 * The message board is kept private only to participants.
 * As a proof of concept, any participant can help any other. Beyond proof of concept, however, ideally, each participant would be limited to serve only those within a one-mile radius (in the interest of safe, walkable delivery).
 <hr>
+
+<img src="src/images/SaveMrFurley.gif"   style="float: left; margin-right: 10px;"/>  
+
+## Installation:
+1. Clone Repository - Open local terminal and enter: `git clone https://github.com/thomasglenngit/livelyhood.git`
+2. In command line enter: `npm install`
+3. In command line enter: `yarn start`
 
 # "livelihood" - Site map
 
@@ -47,89 +54,19 @@
 
 <img src="src/images/FileTree.png" style="float: left; margin-right: 10px;" />
 
-use this as reference for markdown:  
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-src/  
-
-  actions
-
-    display-state-reducer-test.js
-
-  api/
-
-      APIUtils.js  
-      APIUtils.test.js  
-      AuthOAPI.js
-      NeighborhoodAPI.js  
-      ToolsAPI.js 
-
-  components/
-
-      App.css
-      App.js
-      DeleteConfirm.js
-      Footer.js
-      Header.js
-      NewNeighborForm.js
-      Neighbor.js
-      NeighborDetails.js
-      NeighborList.js
-      ReusableForm.js
-      UpdateNeighbor.js
-
-
-  reducers/  
-
-      display-state-reducer.js 
-      index.js
-
-App.test.js  
-firebase.js  
-index.css
-index.js  
-serviceWorker.js  
-setupTest.js  
-
-
 # "livelihood" - Database:
 | Neighbor 1 (ex.) | | 
 |:------ |:-------- |
 | Id: aQOIM3493498ddVWfn	| Name: 	Mr. Furley | 
 | | 	Address:	“#1 NE 16th Street” |
+| | 	Email:	“furley@gmale.com” |
+| | 	City:	“Portland” |
 | | Req. Message:	“My water is shut off. Could anyone lend me a gallon or two?” | 
 | | Req. Response:	“I can bring some over today.” – Mr. Roper | 
 | | Req. Response: "And we have some food for you too, Mr. Furley. Don't you worry." -Jack, Chrissy and Janet
 
-# "livelihood" - Maps:
-## Neighbor 1:  Mr. Furley, #1 NE 16th Street
-<img src="src/images/Furley1.png"   style="float: left; margin-right: 10px;" />
-<br>
 
-## Neighbor 2:  Mr. Roper, #5 NE 17th Street
-<img src="src/images/Furley2.png"   style="float: left; margin-right: 10px;" />
-<br>
-
-## Neighbor 3:  Jack, Chrissy, and Janet #12 NE 18th Street
-<img src="src/images/Furley3.png"   style="float: left; margin-right: 10px;" />
- <br>
- <hr>
-
-
-# Minimum features to meet this goal include: 
-* Sign-up form, including name and address
-* Authentication
-* Authorization
-* List of participants with skills and tools offered, stored in a NoSQL database using google firebase.
-* CRUD functionality in place to Create, Read, Update, Delete members on the stored list.
-
-Tools, frameworks, libraries, APIs, modules and/or other resources to create this MVP:
-* REACT with Redux for front end and back end .
-* CSS grid for REACT to style pages. 
-* NoSQL database using Google Firebase to store form entries.
-* Google Maps API, to plot a map of people within a community willing to help. Or
-* Google Maps API, for IoT asset tracking - to monitor locations of tools, vehicles, etc. 
-* “AuthO” Authorization API, or a simple Identity - Authentication to protect the identities of participants.
+## Tools, frameworks, libraries, APIs, modules and/or other resources to create this MVP:
 
 _[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_
 
@@ -160,16 +97,13 @@ _[Gatsby](https://www.gatsbyjs.com/)_
 hello
 
 
-Beyond the MVP, I would hope to build this application into a mobile application. If I were to really dream big, I would create an open source platform for this idea, or even propose to a venture firm as a start-up idea. Then, I would hire all my May cohort friends to help build this out. Long term I would love to do the following: 
+## Known Bugs:
+1.	Sign-In Authorization: Although this is easy to deploy in a React application using Firebase, for some reason my conditional statements are a tad off and I haven’t yet been able to fix them. 
+2.	Cards: Every volunteer entry should appear on a card. For some reason, my React Bootstrap nodes are not working as intended. 
+3.	Dysfunctional navbar: ‘Sounds like a great band name, or a millennial hangout, but no. Let’s call it a placeholder for the time being. ‘Also fixable by the weekend.
+4.	Improved messaging: I tried to deploy a messaging app that would record message conversations in the Firestorm database. It did not work as planned, so I used Stream. It’s super quick to get going, but I haven’t yet customized it, nor have I yet figured out how to record the messages in Firebase.
+5.	Asset Tracker: I went with the standard Google Maps API, though it is my intention to replace it with Google Maps Asset Tracker, so that volunteers could keep track of their tools. If I were to flesh this out as desired, I would include a tool lending library.
 
-* Curate a chat room where participants can log service requests and where community members can meet those requests, likely using a platform like STREAM.
-* build a tool lending library into the app for people in need to borrow tools and track them using google asset tracking.
-* build an attractive user interface using PROCREATE
-* investigate applying this application to a mobile platform, like iOS.
-
-Is there anything else you’d like your instructor to know?
-* I have changed my mind, choosing now to build this program using React.JS, instead of C# ASP.Net MVC, simply because, long term, I intend to build this project into a mobile iOS appliction. I feel there is more mobile accessibility using REACT. Am I wrong about this? I also feel that, whether I use React.JS or .Net, I am jumping into the "deep end" no matter what. So, I might as well learn as much as I can. 
-* I love code.
 
 
 <img src="src/images/Good_Vibes.gif" style="float: left; margin-right: 10px;" />

@@ -5,7 +5,7 @@ import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import * as a from '../actions/index';
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 import { useDispatch } from 'react-redux';
 import Card from 'react-bootstrap/Card';
 
