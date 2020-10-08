@@ -107,11 +107,18 @@ class App extends React.Component {
       const bodyStyle = {
         // backgroundColor: 'black',
         color: 'Black',
-        minHeight: '100vh',
-        padding: '20px',
-        backgroundColor: 'green',
-        
+        // minHeight: '100vh',
+        padding: '30px',
+        // backgroundColor: 'yellow',
+
       }
+
+      const memoryStyle = {
+        backgroundColor: 'yellow',
+        border: '10px',
+        borderColor: 'black'
+      }
+
       console.log(displayComponent)
       return (
         <React.Fragment>
@@ -122,7 +129,7 @@ class App extends React.Component {
           <h2>
           
           {/* Current Page is{' '} */}
-          <Switch>
+          <Switch >
             <Route path="/about">
               <About />
             </Route>
@@ -136,7 +143,7 @@ class App extends React.Component {
         </h2>
         <h2>
           {/* Navigate to{' '} */}
-          <ButtonToolbar className="custom-btn-toolbar">
+          <ButtonToolbar fluid style={memoryStyle}className="custom-btn-toolbar">
             <LinkContainer to="/">
               <Button>Home</Button>
             </LinkContainer>

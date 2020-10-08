@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Card from 'react-bootstrap/Card';
 
 function Neighbor(props) {
   return(
     <React.Fragment>
-      <div onClick = {() => props.whenNeighborClicked(props.id)}>
-      <p>{props.name}</p>
+      <Card style={{ width: '250px', border: '5px'}} onClick = {() => props.whenNeighborClicked(props.id)}>
+      <Card.Header as='h5'>{props.name}</Card.Header>
+      <Card.Body>
       <p>{props.address}</p>
       <p>{props.city}</p>
       <p>{props.email}</p>
       <p>{props.tools}</p>
-      </div>
-      <hr />
+      </Card.Body>
+      </Card>
     </React.Fragment>
   );
 }

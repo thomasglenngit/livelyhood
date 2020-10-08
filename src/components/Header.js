@@ -30,6 +30,17 @@ function Header() {
     // paddingLeft: '50%'
   }
 
+  const buttonStyle = {
+    margin: '20px',
+    border: '8px',
+    borderColor: 'black',
+    width: '300px',
+    height: '45px',
+    fontWeight: 'bold',
+    fontSize: 'large'
+
+  }
+
   const dispatch = useDispatch();
   const handleClickingAdd = () => {
     const action = a.newFormDisplay();
@@ -46,7 +57,7 @@ function Header() {
         {/* </Col> */}
         <Col md={4}>
           <Image src={livelihood} style={img} />
-          <Button variant='info' onClick={handleClickingAdd}>ADD NEIGHBOR</Button>
+          <Button style={buttonStyle} variant='info' onClick={handleClickingAdd}>Volunteer Form</Button>
         </Col>
       </Row>
     </div>

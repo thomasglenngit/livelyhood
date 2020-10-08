@@ -22,12 +22,10 @@ function NewNeighborForm(props){
   }
 
   return (
-    <React.Fragment>
-      <Container>
+    <React.Fragment>   
       <ReusableForm
         originalNeighbor={null}
-        formSubmission={addNeighborToFirestore} />
-        </Container>
+        formSubmission={addNeighborToFirestore} />  
     </React.Fragment>
   )
 }

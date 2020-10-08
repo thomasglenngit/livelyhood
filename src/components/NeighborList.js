@@ -31,6 +31,7 @@ function NeighborList(props) {
                 id={neighbor.id}
                 key={neighbor.id} />
             })}
+            {/* buttons */}
           </CardColumns>
       </React.Fragment>
     )
