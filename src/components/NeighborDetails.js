@@ -50,6 +50,7 @@ function NeighborDetails(props) {
   if (thisNeighbor && !formSubmitted) {
     return (
       <React.Fragment>
+        <Container>
         <Row>
         <Card style={{ width: '300px' }}>
           <h1>Neighbor Details</h1>
@@ -65,6 +66,7 @@ function NeighborDetails(props) {
           <hr />
         </Card>
         </Row>
+        </Container>
       </React.Fragment>
     )
   } else if (thisNeighbor && formSubmitted) {

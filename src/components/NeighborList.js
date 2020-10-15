@@ -21,11 +21,8 @@ function NeighborList(props) {
   if (isLoaded(neighbors)) {
     return (
       <React.Fragment>
-        <Row>
-          <Col>
             <CardColumns>
-              <Card style={{ width: '400px', border: '5px' }}>
-                <Card.Body>
+              
               {neighbors.map((neighbor) => {
                 return <Neighbor
                   whenNeighborClicked={props.onNeighborSelection}
@@ -37,12 +34,9 @@ function NeighborList(props) {
                   id={neighbor.id}
                   key={neighbor.id} />
               })}
-              </Card.Body>
-              </Card>
+           
               <hr />
             </CardColumns>
-          </Col>
-        </Row>
       </React.Fragment>
     )
   } else {

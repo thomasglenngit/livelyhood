@@ -14,6 +14,7 @@ import DeleteConfirm from './DeleteConfirm';
 import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import CardColumns from 'react-bootstrap/CardColumns';
+import Card from 'react-bootstrap/Card';
 import MapContainer from './Loc';
 import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
@@ -145,14 +146,15 @@ class App extends React.Component {
     console.log(displayComponent)
     return (
       <React.Fragment>
-        <Header />
+        <Header/>
         <Container fluid style={bodyStyle}>
           <MemoryRouter>
             <h1 className="header">Welcome To Your Neighborhood</h1>
+        
             <h2>
 
               {/* Current Page is{' '} */}
-              <Switch >
+              {/* <Switch >
                 <Route path="/about">
                   <About />
                 </Route>
@@ -162,11 +164,11 @@ class App extends React.Component {
                 <Route path="/">
                   <Home />
                 </Route>
-              </Switch>
+              </Switch> */}
             </h2>
             <h2>
               {/* Navigate to{' '} */}
-              <ButtonToolbar fluid style={memoryStyle} className="custom-btn-toolbar">
+              {/* <ButtonToolbar fluid style={memoryStyle} className="custom-btn-toolbar">
                 <LinkContainer to="/">
                   <Button>Home</Button>
                 </LinkContainer>
@@ -176,15 +178,14 @@ class App extends React.Component {
                 <LinkContainer to="/users">
                   <Button>Users</Button>
                 </LinkContainer>
-              </ButtonToolbar>
+              </ButtonToolbar> */}
             </h2>
             </MemoryRouter>
-
-            <CardColumns>
+              <CardColumns>
+                <Card>
               {displayComponent}
-
-            </CardColumns>
-
+              </Card>
+              </CardColumns>
             <MapContainer />
             {/* <Footer /> */}
             <Chat client={chatClient} theme={'messaging light'}>
