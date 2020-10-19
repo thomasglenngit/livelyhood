@@ -46,11 +46,11 @@ const channel = chatClient.channel('messaging', 'godevs', {
   name: 'Talk about Go',
 });
 
-const Home = () => <span>Home</span>;
+// const Home = () => <span>Home</span>;
 
-const About = () => <span>About</span>
+// const About = () => <span>About</span>
 
-const Users = () => <span>Users</span>
+// const Users = () => <span>Users</span>
 
 class App extends React.Component {
 
@@ -146,11 +146,14 @@ class App extends React.Component {
     console.log(displayComponent)
     return (
       <React.Fragment>
-        <Header/>
-        <Container fluid style={bodyStyle}>
-          <MemoryRouter>
+        <Header />
+        <Container >
+        {/* <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/960.css" /> */}
+          {/* <MemoryRouter> */}
             <h1 className="header">Welcome To Your Neighborhood</h1>
-        
+
             <h2>
 
               {/* Current Page is{' '} */}
@@ -180,26 +183,24 @@ class App extends React.Component {
                 </LinkContainer>
               </ButtonToolbar> */}
             </h2>
-            </MemoryRouter>
-              <CardColumns>
-                <Card>
-              {displayComponent}
-              </Card>
-              </CardColumns>
-            <MapContainer />
-            {/* <Footer /> */}
-            <Chat client={chatClient} theme={'messaging light'}>
-              <Channel channel={channel}>
-                <Window>
-                  <ChannelHeader />
-                  <MessageList />
-                  <MessageInput />
-                </Window>
-                <Thread />
-              </Channel>
-            </Chat>
+          {/* </MemoryRouter> */}
           
+            
+              {displayComponent}
+            
         </Container>
+        <MapContainer />
+        {/* <Footer /> */}
+        <Chat client={chatClient} theme={'messaging light'}>
+          <Channel channel={channel}>
+            <Window>
+              <ChannelHeader />
+              <MessageList />
+              <MessageInput />
+            </Window>
+            <Thread />
+          </Channel>
+        </Chat>
       </React.Fragment>
     );
   }

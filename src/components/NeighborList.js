@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import Neighbor from './Neighbor';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
-import CardColumns from 'react-bootstrap/CardColumns';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import { CardColumns } from 'react-bootstrap';
+import  { Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 
@@ -21,22 +20,21 @@ function NeighborList(props) {
   if (isLoaded(neighbors)) {
     return (
       <React.Fragment>
-            <CardColumns>
-              
-              {neighbors.map((neighbor) => {
-                return <Neighbor
-                  whenNeighborClicked={props.onNeighborSelection}
-                  name={neighbor.name}
-                  address={neighbor.address}
-                  city={neighbor.city}
-                  email={neighbor.email}
-                  tools={neighbor.tools}
-                  id={neighbor.id}
-                  key={neighbor.id} />
-              })}
-           
-              <hr />
-            </CardColumns>
+        <Row>
+          <CardColumns>
+            {neighbors.map((neighbor) => {
+              return <Neighbor
+                whenNeighborClicked={props.onNeighborSelection}
+                name={neighbor.name}
+                address={neighbor.address}
+                city={neighbor.city}
+                email={neighbor.email}
+                tools={neighbor.tools}
+                id={neighbor.id}
+                key={neighbor.id} />
+            })}
+          </CardColumns>
+        </Row>
       </React.Fragment>
     )
   } else {

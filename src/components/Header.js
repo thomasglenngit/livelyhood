@@ -47,16 +47,9 @@ function Header() {
 
   return (
     <React.Fragment>
-    <div className="page-header" style={headerStyle}>
-      <Row>
-        {/* <Col md={5} > */}
-          {/* <h1 style={h1Header}>LIVELIHOOD</h1> */}
-        {/* </Col> */}
-        <Col md={4}>
+    <div className="page-header" style={headerStyle} >
           <Image src={livelihood} style={img} />
           <Button style={buttonStyle} variant='info' onClick={handleClickingAdd}>Volunteer Form</Button>
-        </Col>
-      </Row>
     </div>
     </React.Fragment>
   );

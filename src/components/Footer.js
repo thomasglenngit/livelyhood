@@ -7,7 +7,7 @@ function Footer() {
     backgroundColor: 'gold',
     paddingTop: '5px',
     paddingBottom: '5px',
-    marginBottom: '10px'
+    
   }
   const h1Footer = {
     fontWeight: 'bold'
