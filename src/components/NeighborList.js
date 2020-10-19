@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 import { CardColumns } from 'react-bootstrap';
 import  { Row } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
 
 
 function NeighborList(props) {
@@ -20,7 +19,7 @@ function NeighborList(props) {
   if (isLoaded(neighbors)) {
     return (
       <React.Fragment>
-        <Row>
+        <Row style={{ width: 'auto'}}>
           <CardColumns>
             {neighbors.map((neighbor) => {
               return <Neighbor

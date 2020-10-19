@@ -152,8 +152,8 @@ class App extends React.Component {
         <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/960.css" /> */}
           {/* <MemoryRouter> */}
-            <h1 className="header">Welcome To Your Neighborhood</h1>
-
+            <h1 border='danger' className="header" style={{ textAlign: 'center', paddingBottom: '18px'}}>Welcome To Your Neighborhood!</h1>
+            <h3 style={{ paddingBottom: '18px' }}>Click on any card to edit/delete.</h3>
             <h2>
 
               {/* Current Page is{' '} */}
