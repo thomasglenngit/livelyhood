@@ -28,7 +28,7 @@ import { StreamChat } from 'stream-chat';
 
 import 'stream-chat-react/dist/css/index.css';
 
-const chatClient = new StreamChat('gx5a64bj4ptz');
+const chatClient = new StreamChat('26wbcazhfp5d');
 const userToken = `${process.env.REACT_APP_STREAM_USER_TOKEN}`;
 
 chatClient.setUser(
