@@ -15,6 +15,8 @@ import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
+import { Cards } from '../components/Cards/Cards';
+// import { Card } from '../components/Cards/CardUI';
 import MapContainer from './Loc';
 import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
@@ -53,8 +55,6 @@ import './App.css';
 // const Users = () => <span>Users</span>
 
 class App extends React.Component {
-
-
   constructor(props) {
     super(props);
   }
@@ -95,22 +95,24 @@ class App extends React.Component {
   }
 
   render() {
-    // const auth = this.props.firebase.auth();
-    // if (!isLoaded(auth)) {
-    //   return (
-    //     <React.Fragment>
-    //       <h1>Loading...</h1>
-    //     </React.Fragment>
-    //   )
-    // }
-    // if ((isLoaded(auth)) && (auth.currentUser == null)) {
-    //   return (
-    //     <React.Fragment>
-    //       <h1>You must be signed in to volunteer.</h1>
-    //     </React.Fragment>
-    //   )
-    // }
-    // if ((isLoaded(auth)) && (auth.currentUser != null)) {
+    // This is code for signing in:
+      // const auth = this.props.firebase.auth();
+      // if (!isLoaded(auth)) {
+      //   return (
+      //     <React.Fragment>
+      //       <h1>Loading...</h1>
+      //     </React.Fragment>
+      //   )
+      // }
+      // if ((isLoaded(auth)) && (auth.currentUser == null)) {
+      //   return (
+      //     <React.Fragment>
+      //       <h1>You must be signed in to volunteer.</h1>
+      //     </React.Fragment>
+      //   )
+      // }
+      // if ((isLoaded(auth)) && (auth.currentUser != null)) {
+
     // Handle determing what to display:
     let displayComponent;
     // let buttonText;
@@ -119,7 +121,6 @@ class App extends React.Component {
     if (this.props.displayStateReducer.display === c.NEIGHBOR_LIST) {
       displayComponent = <NeighborList onNeighborSelection={this.handleChangingSelectedNeighbor} />
     } else if (this.props.displayStateReducer.display === c.NEIGHBOR_DETAILS) {
-
       displayComponent = <NeighborDetails onClickingEdit={this.handleClickingEdit} onClickingDelete={this.handleClickingDelete} />
     } else if (this.props.displayStateReducer.display === c.NEW_FORM) {
       displayComponent = <NewNeighborForm onNewNeighborCreation={this.returnHome} />
@@ -187,10 +188,10 @@ class App extends React.Component {
           
             
               {displayComponent}
-            
+
         </Container>
         <MapContainer />
-        {/* <Footer /> */}
+        <Footer />
         {/* <Chat client={chatClient} theme={'messaging light'}>
           <Channel channel={channel}>
             <Window>

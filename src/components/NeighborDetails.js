@@ -13,8 +13,7 @@ function NeighborDetails(props) {
   ]);
 
   const [formSubmitted, setFormSubmission] = useState(false);
-  // const [answeredCorrectly, setAnswerState] = useState(null);
-
+  
   const thisNeighbor = props.firestore.data.neighbors[props.displayStateReducer.selectedNeighbor];
 
 

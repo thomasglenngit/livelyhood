@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import 'firebase/auth';
 
 
+
 const store = createStore(rootReducer, { displayStateReducer: { display: 'NEIGHBOR_LIST', selectedNeighbor: null }});
 
 const rrfProps = {
@@ -28,7 +29,6 @@ ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
     <App />
-    {/* <Card/> */}
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById('root')
