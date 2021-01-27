@@ -16,12 +16,12 @@ function Neighbor(props) {
         </div>
         <div className="card-body text-dark" >
           <h4 className="card-title">{props.name}</h4>
-          <p className="card-text text-secondary">
-          <p><strong>Address:</strong>   {props.address}</p>
-          <p><strong>City:</strong>   {props.city}</p>
-          <p><strong>Email:</strong>   {props.email}</p>
-          <p><strong>Tools:</strong>   {props.tools}</p>
-        </p>
+          <div className="card-text text-secondary">
+            <p><strong>Address:</strong>   {props.address}</p>
+            <p><strong>City:</strong>   {props.city}</p>
+            <p><strong>Email:</strong>   {props.email}</p>
+            <p><strong>Tools:</strong>   {props.tools}</p>
+          </div>
           <a className="btn btn-outline-success" onClick={() => props.whenNeighborClicked(props.id)}>Edit Details</a>
         </div>
       </div>
