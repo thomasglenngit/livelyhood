@@ -15,6 +15,8 @@ import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
+import { Cards } from '../components/Cards/Cards';
+// import { Card } from '../components/Cards/CardUI';
 import MapContainer from './Loc';
 import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
@@ -22,29 +24,29 @@ import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
 // import { BrowserRouter, Route, Link } from "react-router-dom";
 import './App.css';
-import { Chat, Channel, ChannelHeader, Thread, Window } from 'stream-chat-react';
-import { MessageList, MessageInput } from 'stream-chat-react';
-import { StreamChat } from 'stream-chat';
+// import { Chat, Channel, ChannelHeader, Thread, Window } from 'stream-chat-react';
+// import { MessageList, MessageInput } from 'stream-chat-react';
+// import { StreamChat } from 'stream-chat';
 
-import 'stream-chat-react/dist/css/index.css';
+// import 'stream-chat-react/dist/css/index.css';
 
-const chatClient = new StreamChat('26wbcazhfp5d');
-const userToken = `${process.env.REACT_APP_STREAM_USER_TOKEN}`;
+// const chatClient = new StreamChat('26wbcazhfp5d');
+// const userToken = `${process.env.REACT_APP_STREAM_USER_TOKEN}`;
 
-chatClient.setUser(
-  {
-    id: 'winter-glitter-7',
-    name: 'Winter glitter',
-    image: 'https://getstream.io/random_png/?id=winter-glitter-7&name=Winter+glitter'
-  },
-  userToken,
-);
+// chatClient.setUser(
+//   {
+//     id: 'winter-glitter-7',
+//     name: 'Winter glitter',
+//     image: 'https://getstream.io/random_png/?id=winter-glitter-7&name=Winter+glitter'
+//   },
+//   userToken,
+// );
 
-const channel = chatClient.channel('messaging', 'godevs', {
-  // add as many custom fields as you'd like
-  image: 'https://cdn.chrisshort.net/testing-certificate-chains-in-go/GOPHER_MIC_DROP.png',
-  name: 'Talk about Go',
-});
+// const channel = chatClient.channel('messaging', 'godevs', {
+//   // add as many custom fields as you'd like
+//   image: 'https://cdn.chrisshort.net/testing-certificate-chains-in-go/GOPHER_MIC_DROP.png',
+//   name: 'Talk about Go',
+// });
 
 // const Home = () => <span>Home</span>;
 
@@ -53,8 +55,6 @@ const channel = chatClient.channel('messaging', 'godevs', {
 // const Users = () => <span>Users</span>
 
 class App extends React.Component {
-
-
   constructor(props) {
     super(props);
   }
@@ -95,22 +95,24 @@ class App extends React.Component {
   }
 
   render() {
-    // const auth = this.props.firebase.auth();
-    // if (!isLoaded(auth)) {
-    //   return (
-    //     <React.Fragment>
-    //       <h1>Loading...</h1>
-    //     </React.Fragment>
-    //   )
-    // }
-    // if ((isLoaded(auth)) && (auth.currentUser == null)) {
-    //   return (
-    //     <React.Fragment>
-    //       <h1>You must be signed in to volunteer.</h1>
-    //     </React.Fragment>
-    //   )
-    // }
-    // if ((isLoaded(auth)) && (auth.currentUser != null)) {
+    // This is code for signing in:
+      // const auth = this.props.firebase.auth();
+      // if (!isLoaded(auth)) {
+      //   return (
+      //     <React.Fragment>
+      //       <h1>Loading...</h1>
+      //     </React.Fragment>
+      //   )
+      // }
+      // if ((isLoaded(auth)) && (auth.currentUser == null)) {
+      //   return (
+      //     <React.Fragment>
+      //       <h1>You must be signed in to volunteer.</h1>
+      //     </React.Fragment>
+      //   )
+      // }
+      // if ((isLoaded(auth)) && (auth.currentUser != null)) {
+
     // Handle determing what to display:
     let displayComponent;
     // let buttonText;
@@ -119,7 +121,6 @@ class App extends React.Component {
     if (this.props.displayStateReducer.display === c.NEIGHBOR_LIST) {
       displayComponent = <NeighborList onNeighborSelection={this.handleChangingSelectedNeighbor} />
     } else if (this.props.displayStateReducer.display === c.NEIGHBOR_DETAILS) {
-
       displayComponent = <NeighborDetails onClickingEdit={this.handleClickingEdit} onClickingDelete={this.handleClickingDelete} />
     } else if (this.props.displayStateReducer.display === c.NEW_FORM) {
       displayComponent = <NewNeighborForm onNewNeighborCreation={this.returnHome} />
@@ -187,11 +188,11 @@ class App extends React.Component {
           
             
               {displayComponent}
-            
+
         </Container>
         <MapContainer />
-        {/* <Footer /> */}
-        <Chat client={chatClient} theme={'messaging light'}>
+        <Footer />
+        {/* <Chat client={chatClient} theme={'messaging light'}>
           <Channel channel={channel}>
             <Window>
               <ChannelHeader />
@@ -200,7 +201,7 @@ class App extends React.Component {
             </Window>
             <Thread />
           </Channel>
-        </Chat>
+        </Chat> */}
       </React.Fragment>
     );
   }

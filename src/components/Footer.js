@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer() {
+export const Footer = () => {
   const footerStyle = {
     fontFamily: 'sans-serif',
     textAlign: 'center',

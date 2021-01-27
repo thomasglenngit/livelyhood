@@ -47,10 +47,13 @@ function Header() {
 
   return (
     <React.Fragment>
-    <div className="page-header" style={headerStyle} >
-          <Image src={livelihood} style={img} />
+      <div className="page-header" style={headerStyle} >
+        <Image src={livelihood} style={img}></Image>
+        <div>
           <Button style={buttonStyle} variant='info' onClick={handleClickingAdd}>Volunteer Form</Button>
-    </div>
+        </div>
+      </div>
+
     </React.Fragment>
   );
 }
