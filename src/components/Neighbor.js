@@ -16,7 +16,7 @@ function Neighbor(props) {
         </div>
         <div className="card-body text-dark" >
           <h4 className="card-title">{props.name}</h4>
-          <div className="card-text text-secondary">
+          <div className="card-text text-secondary text-left">
             <p><strong>Address:</strong>   {props.address}</p>
             <p><strong>City:</strong>   {props.city}</p>
             <p><strong>Email:</strong>   {props.email}</p>
