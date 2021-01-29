@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer = () => {
+export function Footer() {
   const footerStyle = {
     fontFamily: 'sans-serif',
     textAlign: 'center',
@@ -14,9 +14,11 @@ export const Footer = () => {
   }
 
   return (
+   
     <div className="page-footer" style={footerStyle}>
       <h3 style={h1Footer}>Copyright: Thomas Glenn 2020</h3>
     </div>
+
   )
 }
 

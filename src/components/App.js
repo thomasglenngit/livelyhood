@@ -13,16 +13,16 @@ import EditNeighborForm from './EditNeighborForm';
 import DeleteConfirm from './DeleteConfirm';
 import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
-import CardColumns from 'react-bootstrap/CardColumns';
-import Card from 'react-bootstrap/Card';
-import { Cards } from '../components/Cards/Cards';
+// import CardColumns from 'react-bootstrap/CardColumns';
+// import Card from 'react-bootstrap/Card';
+// import { Cards } from '../components/Cards/Cards';
 // import { Card } from '../components/Cards/CardUI';
 import MapContainer from './Loc';
 import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import './App.css';
 // import { Chat, Channel, ChannelHeader, Thread, Window } from 'stream-chat-react';
 // import { MessageList, MessageInput } from 'stream-chat-react';
@@ -59,7 +59,6 @@ class App extends React.Component {
     super(props);
   }
 
-
   // functions here...
   handleChangingSelectedNeighbor = (id) => {
     console.log(id);
@@ -70,6 +69,13 @@ class App extends React.Component {
 
   returnHome = () => {
     const { dispatch } = this.props;
+    const action = a.homeList();
+    dispatch(action);
+  }
+
+  handleAddingNewNeighbor = (id) => {
+    const { dispatch } = this.props;
+    this.props.firestore.add({collection: 'neighbors', doc: id})
     const action = a.homeList();
     dispatch(action);
   }
@@ -124,8 +130,12 @@ class App extends React.Component {
       displayComponent = <NeighborDetails onClickingEdit={this.handleClickingEdit} onClickingDelete={this.handleClickingDelete} />
     } else if (this.props.displayStateReducer.display === c.NEW_FORM) {
       displayComponent = <NewNeighborForm onNewNeighborCreation={this.returnHome} />
+
+    } else if (this.props.displayStateReducer.display === c.NEW_NEIGHBOR) {
+      displayComponent = <NeighborList onNewNeighborCreation={this.handleAddingNewNeighbor}/>
     } else if (this.props.displayStateReducer.display === c.EDIT_FORM) {
       displayComponent = <EditNeighborForm selectedNeighbor={this.props.displayStateReducer.selectedNeighbor} onEditNeighbor={this.returnHome} />
+
     } else if (this.props.displayStateReducer.display === c.DELETE_NEIGHBOR) {
       displayComponent = <DeleteConfirm selectedNeighbor={this.props.displayStateReducer.selectedNeighbor} onDeleteNeighbor={this.returnHome} onDeleteForReals={this.handleDeletingNeighbor} />
     }
@@ -170,25 +180,7 @@ class App extends React.Component {
                 </Route>
               </Switch> */}
             </h2>
-            <h2>
-              {/* Navigate to{' '} */}
-              {/* <ButtonToolbar fluid style={memoryStyle} className="custom-btn-toolbar">
-                <LinkContainer to="/">
-                  <Button>Home</Button>
-                </LinkContainer>
-                <LinkContainer to="/about">
-                  <Button>About</Button>
-                </LinkContainer>
-                <LinkContainer to="/users">
-                  <Button>Users</Button>
-                </LinkContainer>
-              </ButtonToolbar> */}
-            </h2>
-          {/* </MemoryRouter> */}
-          
-            
               {displayComponent}
-
         </Container>
         <MapContainer />
         <Footer />

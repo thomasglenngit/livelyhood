@@ -34,7 +34,9 @@ function Header() {
     width: '300px',
     height: '45px',
     fontWeight: 'bold',
-    fontSize: 'large'
+    fontSize: 'large',
+    position: 'relative',
+    
 
   }
 
@@ -48,7 +50,12 @@ function Header() {
   return (
     <React.Fragment>
       <div className="page-header" style={headerStyle} >
-        <Image src={livelihood} style={img}></Image>
+        <Image 
+        src={livelihood} 
+        style={img}
+        >
+
+        </Image>
         <div>
           <Button style={buttonStyle} variant='info' onClick={handleClickingAdd}>Volunteer Form</Button>
         </div>
