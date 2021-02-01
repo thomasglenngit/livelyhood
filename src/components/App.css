@@ -1,4 +1,65 @@
-.App {
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #739CA1;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  padding: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.current {
+  border-bottom: 4px solid white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* color palette
+{
+  "Bistre Brown":"8B7513", 
+  "Gunmetal":"2E363D",
+  "Cadet Blue":"739CA1",
+  "Laser Lemon":"FBFB6A",
+  "Burnt Umber":"883A2D"
+}
+*/
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -43,4 +104,4 @@
 
 
 
-
+ */

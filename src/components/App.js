@@ -18,35 +18,13 @@ import Container from 'react-bootstrap/Container';
 // import { Cards } from '../components/Cards/Cards';
 // import { Card } from '../components/Cards/CardUI';
 import MapContainer from './Loc';
-import { MemoryRouter, Switch, Route } from 'react-router-dom';
+// import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
-import { BrowserRouter, Link } from "react-router-dom";
 import './App.css';
-// import { Chat, Channel, ChannelHeader, Thread, Window } from 'stream-chat-react';
-// import { MessageList, MessageInput } from 'stream-chat-react';
-// import { StreamChat } from 'stream-chat';
+import { NavLink, Switch, Route } from 'react-router-dom'
 
-// import 'stream-chat-react/dist/css/index.css';
-
-// const chatClient = new StreamChat('26wbcazhfp5d');
-// const userToken = `${process.env.REACT_APP_STREAM_USER_TOKEN}`;
-
-// chatClient.setUser(
-//   {
-//     id: 'winter-glitter-7',
-//     name: 'Winter glitter',
-//     image: 'https://getstream.io/random_png/?id=winter-glitter-7&name=Winter+glitter'
-//   },
-//   userToken,
-// );
-
-// const channel = chatClient.channel('messaging', 'godevs', {
-//   // add as many custom fields as you'd like
-//   image: 'https://cdn.chrisshort.net/testing-certificate-chains-in-go/GOPHER_MIC_DROP.png',
-//   name: 'Talk about Go',
-// });
 
 // const Home = () => <span>Home</span>;
 
@@ -55,9 +33,6 @@ import './App.css';
 // const Users = () => <span>Users</span>
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   // functions here...
   handleChangingSelectedNeighbor = (id) => {
@@ -157,7 +132,9 @@ class App extends React.Component {
     console.log(displayComponent)
     return (
       <React.Fragment>
+        <Navigation />
         <Header />
+        <Main />
         <Container >
         {/* <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
@@ -198,6 +175,46 @@ class App extends React.Component {
     );
   }
 }
+
+const Navigation = () => (
+  <nav>
+    <ul>
+      <li><NavLink exact activeClassName="current" to='/'>Home</NavLink></li>
+      <li><NavLink exact activeClassName="current" to='/about'>About</NavLink></li>
+      <li><NavLink exact activeClassName="current" to='/contact'>Contact</NavLink></li>
+    </ul>
+  </nav>
+);
+
+const Home = () => (
+  <div className='home'>
+    <h1>Welcome to my portfolio website</h1>
+    <p> Feel free to browse around and learn more about me.</p>
+  </div>
+);
+
+const About = () => (
+  <div className='about'>
+    <h1>About Me</h1>
+    <p>Ipsum dolor dolorem consectetur est velit fugiat. Dolorem provident corporis fuga saepe distinctio ipsam? Et quos harum excepturi dolorum molestias?</p>
+    <p>Ipsum dolor dolorem consectetur est velit fugiat. Dolorem provident corporis fuga saepe distinctio ipsam? Et quos harum excepturi dolorum molestias?</p>
+  </div>
+);
+
+const Contact = () => (
+  <div className='contact'>
+    <h1>Contact Me</h1>
+    <p>You can reach me via email: <strong>hello@example.com</strong></p>
+  </div>
+);
+
+const Main = () => (
+  <Switch>
+    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/about' component={About}></Route>
+    <Route exact path='/contact' component={Contact}></Route>
+  </Switch>
+);
 
 App.propTypes = {
   display: PropTypes.object,
