@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Switch, Route } from 'react-router-dom'
+import Container from 'react-bootstrap/Container';
 
 
 export const Navigation = () => (
@@ -39,6 +40,6 @@ export const Main = () => (
   <Switch>
     <Route exact path='/' component={Home}></Route>
     <Route exact path='/about' component={About}></Route>
-    <Route exact path='/contact' component={Contact}></Route>
+    <Route exact path='/contact' component={Contact} ></Route>
   </Switch>
 );

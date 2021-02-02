@@ -26,7 +26,7 @@ import './App.css';
 import { Navigation, Main } from './Navigation'
 
 
-class App extends React.Component {
+export class App extends React.Component {
 
   // functions here...
   handleChangingSelectedNeighbor = (id) => {
