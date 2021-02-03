@@ -1,19 +1,21 @@
 import React from 'react'
-import { NavLink, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-scroll'
 import './App.css'
+// import { NavLink, Switch, Route } from 'react-router-dom'
 
 
 
 export const Navigation = () => (
   <nav>
     <ul>
-      <icon ></icon>
+      <icon >
+        
+      </icon>
       {/* <li><NavLink exact activeClassName="current" spy={true} smooth={true} to='/'>Home</NavLink></li> */}
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='about'>About</Link></li>
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
+      <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
+      <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
+      <li><Link exact className="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
+      <li><Link exact className="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
     </ul>
   </nav>
 );

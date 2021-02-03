@@ -23,20 +23,19 @@ nav ul {
 
 nav ul li {
   padding: 20px;
-  
-}
-
-nav ul li a {
   color: white;
   text-decoration: none;
 }
 
-header {
-  margin: none;
+.current {
+  color: white;
+  font-weight: bold;
 }
 
-.current {
-  border-bottom: 4px solid white;
+.current:hover {
+  text-decoration: none;
+  color: #FBFB6A;
+  border-bottom: 4px solid #FBFB6A;
 }
 
 h1 {
