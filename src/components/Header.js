@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import * as a from '../actions/index';
 import { useDispatch } from 'react-redux';
+import './App.css'
 
 function Header() {
 
@@ -13,15 +14,10 @@ function Header() {
   const headerStyle = {
     fontFamily: 'sans-serif',
     textAlign: 'center',
-    // backgroundColor: 'lavender',
-    // paddingTop: '50px',
+    paddingTop: null,
     paddingBottom: '50px',
-    marginBottom: '20px'
   }
-  const h1Header = {
-    color: 'black',
-    fontWeight: 'bold'
-  }
+
   const img = {
     width: '100%',
     height: 'auto'
@@ -36,7 +32,7 @@ function Header() {
     fontWeight: 'bold',
     fontSize: 'large',
     position: 'relative',
-    
+
 
   }
 
@@ -50,15 +46,16 @@ function Header() {
   return (
     <React.Fragment>
       <div className="page-header" style={headerStyle} >
-        <Image 
-        src={livelihood} 
-        style={img}
+        <Image
+          src={livelihood}
+          style={img}
         >
-
         </Image>
         <div>
           <Button style={buttonStyle} variant='info' onClick={handleClickingAdd}>Volunteer Form</Button>
         </div>
+
+
       </div>
 
     </React.Fragment>

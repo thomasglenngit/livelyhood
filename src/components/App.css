@@ -18,16 +18,21 @@ nav ul {
   list-style: none;
   display: flex;
   background-color: #739CA1;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 nav ul li {
   padding: 20px;
+  
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+header {
+  margin: none;
 }
 
 .current {

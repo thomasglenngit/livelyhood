@@ -23,10 +23,9 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
 import './App.css';
-import { Navigation, Main } from './Navigation'
+import { Navigation } from './Navigation'
 import { NavLink, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-scroll'
-
 
 export class App extends React.Component {
 
@@ -115,9 +114,11 @@ export class App extends React.Component {
     return (
       <React.Fragment>
         <Navigation />
-        <CardsNav />
+
         <Header />
-        <Main />
+        <div className="about"></div>
+        <div className="contact"></div>
+
         {/* <CardsDestination /> */}
         <Container >
           {/* <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
@@ -166,15 +167,15 @@ export class App extends React.Component {
   }
 }
 
-const CardsNav = () => (
-  <nav>
-    <ul>
-      <icon></icon>
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
-      <li><Link exact activeClassName="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
-    </ul>
-  </nav>
-)
+// const CardsNav = () => (
+//   <nav>
+//     <ul>
+//       <icon></icon>
+//       <li><Link exact activeClassName="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
+//       <li><Link exact activeClassName="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
+//     </ul>
+//   </nav>
+// )
 
 // const CardsDestination = () => (
 //   <Switch>
