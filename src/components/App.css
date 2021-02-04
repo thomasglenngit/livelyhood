@@ -74,10 +74,35 @@ p {
   font-size: 20px;
 }
 
-#volunteer-button {
-align-content: flex-end;
+.invite-title {
+  font-weight: bolder;
+  font-size: 60px;
 }
 
+.invite-content {
+  padding-inline: 60px;
+}
+
+#volunteer-button {
+align-content: flex-end;
+font-size: larger;
+border: bold;
+width: 200px;
+}
+
+#cards-page {
+  background-color: #8B7513;
+}
+
+#cards {
+  padding-inline: 200px
+}
+
+.cards-title {
+  padding-inline: 180px;
+  font-weight: bolder;
+  font-size: 60px;
+}
 
 
 /* color palette
