@@ -16,6 +16,7 @@ function Header() {
     textAlign: 'center',
     paddingTop: null,
     paddingBottom: '50px',
+    zIndex: 1
   }
 
   const img = {

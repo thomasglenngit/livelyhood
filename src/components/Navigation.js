@@ -12,6 +12,7 @@ export const Navigation = () => (
         
       </icon>
       {/* <li><NavLink exact activeClassName="current" spy={true} smooth={true} to='/'>Home</NavLink></li> */}
+      <li><img className="img" alt="livelyhood icon" src="../src/images/LH.png"></img></li>
       <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
       <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
       <li><Link exact className="current" spy={true} smooth={true} to='cards'>Cards</Link></li>

@@ -15,16 +15,27 @@ html {
 }
 
 nav ul {
+  position: fixed;
+  width: 100%;
   list-style: none;
-  display: flex;
+  display: inline-flex;
   background-color: #739CA1;
+  padding: 10px 30px 10px 20px;
+  align-items: baseline;
+  justify-content: flex-end;
   margin-bottom: 0px;
+  z-index: 2;
 }
 
 nav ul li {
   padding: 20px;
+  display: inline;
   color: white;
   text-decoration: none;
+}
+
+nav img {
+  width: 20px;
 }
 
 .current {
