@@ -13,6 +13,7 @@ import EditNeighborForm from './EditNeighborForm';
 import DeleteConfirm from './DeleteConfirm';
 import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
+import About from './About'
 // import CardColumns from 'react-bootstrap/CardColumns';
 // import Card from 'react-bootstrap/Card';
 // import { Cards } from '../components/Cards/Cards';
@@ -26,6 +27,7 @@ import './App.css';
 import { Navigation } from './Navigation'
 import { NavLink, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-scroll'
+
 
 export class App extends React.Component {
 
@@ -117,6 +119,7 @@ export class App extends React.Component {
 
         <Header />
         <div className="about"></div>
+        <About />
         <div className="contact"></div>
 
         {/* <CardsDestination /> */}

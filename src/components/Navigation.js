@@ -1,22 +1,27 @@
 import React from 'react'
+import LHBorderless from '../images/LHBorderless.png'
+import Hamburger from '../images/Hamburger.png'
 import { Link } from 'react-scroll'
 import './App.css'
+
 // import { NavLink, Switch, Route } from 'react-router-dom'
 
 
 
 export const Navigation = () => (
   <nav>
-    <ul>
-      <icon >
+    
         
-      </icon>
+      
+    <ul>
+      
       {/* <li><NavLink exact activeClassName="current" spy={true} smooth={true} to='/'>Home</NavLink></li> */}
-      <li><img className="img" alt="livelyhood icon" src="../src/images/LH.png"></img></li>
+      <li><img className="lh-logo" alt="livelyhood icon" src={LHBorderless}></img></li>
       <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
       <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
       <li><Link exact className="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
       <li><Link exact className="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
+      <li><img className="hamburger-logo" alt="hamburger" icon src={Hamburger}></img></li>
     </ul>
   </nav>
 );
@@ -29,7 +34,7 @@ export const Navigation = () => (
   //     <p> Feel free to browse around and learn more about me.</p>
   //   </div>
   // );
-  
+
   // const About = () => (
   //   <div className='about'>
   //     <h1>About Me</h1>
@@ -37,14 +42,14 @@ export const Navigation = () => (
   //     <p>Ipsum dolor dolorem consectetur est velit fugiat. Dolorem provident corporis fuga saepe distinctio ipsam? Et quos harum excepturi dolorum molestias?</p>
   //   </div>
   // );
-  
+
   // const Contact = () => (
   //   <div className='contact'>
   //     <h1>Contact Me</h1>
   //     <p>You can reach me via email: <strong>hello@example.com</strong></p>
   //   </div>
   // );
-  
+
   // export const Main = () => (
   //   <Switch>
   //     <Route exact path='/' component={Home}></Route>

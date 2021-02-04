@@ -1,3 +1,5 @@
+
+
 html {
   box-sizing: border-box;
 }
@@ -18,9 +20,9 @@ nav ul {
   position: fixed;
   width: 100%;
   list-style: none;
-  display: inline-flex;
+  /* display: inline-flex; */
   background-color: #739CA1;
-  padding: 10px 30px 10px 20px;
+  padding: 0px 30px 0px 20px;
   align-items: baseline;
   justify-content: flex-end;
   margin-bottom: 0px;
@@ -32,10 +34,7 @@ nav ul li {
   display: inline;
   color: white;
   text-decoration: none;
-}
-
-nav img {
-  width: 20px;
+  justify-items: start;
 }
 
 .current {
@@ -49,6 +48,18 @@ nav img {
   border-bottom: 4px solid #FBFB6A;
 }
 
+.lh-logo {
+  height: 70px;
+  width: 90px;
+  color: #FBFB6A;
+  margin-right: 600px;
+}
+
+.hamburger-logo {
+  height: 70px;
+  width: 90px;
+}
+
 h1 {
   margin-bottom: 20px;
 }
@@ -56,6 +67,18 @@ h1 {
 p {
   margin-bottom: 15px;
 }
+
+.page-about {
+  padding: 50px 150px 100px 150px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#volunteer-button {
+align-content: flex-end;
+}
+
+
 
 /* color palette
 {

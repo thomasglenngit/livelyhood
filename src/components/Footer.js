@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-const Footer = () => {
+export const Footer = () => {
   const footerStyle = {
     fontFamily: 'sans-serif',
     textAlign: 'center',
