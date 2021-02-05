@@ -99,10 +99,14 @@ hello
 
 ## Known Bugs:
 1.	Sign-In Authorization: Although this is easy to deploy in a React application using Firebase, for some reason my conditional statements are a tad off and I haven’t yet been able to fix them. 
-2.	Cards: Every volunteer entry should appear on a card. For some reason, my React Bootstrap nodes are not working as intended. 
+2.	Cards: Every volunteer entry should appear on a card. The Add Volunteer card will add a name but only when it is styled in Bootstrap, and not in semantic or custom styling. 
 3.	Dysfunctional navbar: ‘Sounds like a great band name, or a millennial hangout, but no. Let’s call it a placeholder for the time being. ‘Also fixable by the weekend.
 4.	Improved messaging: I tried to deploy a messaging app that would record message conversations in the Firestorm database. It did not work as planned, so I used Stream. It’s super quick to get going, but I haven’t yet customized it, nor have I yet figured out how to record the messages in Firebase.
 5.	Asset Tracker: I went with the standard Google Maps API, though it is my intention to replace it with Google Maps Asset Tracker, so that volunteers could keep track of their tools. If I were to flesh this out as desired, I would include a tool lending library.
+6. Scroll to function tutorial found at:
+ https://medium.com/how-to-react/scroll-to-an-element-on-click-in-react-js-8424e478bb9
+7. Router function tutorial found at: 
+https://blog.pusher.com/getting-started-with-react-router-v4/
 
 
 
