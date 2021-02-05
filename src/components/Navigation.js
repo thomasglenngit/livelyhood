@@ -9,21 +9,17 @@ import './App.css'
 
 
 export const Navigation = () => (
-  <nav>
-    
-        
-      
-    <ul>
-      
-      {/* <li><NavLink exact activeClassName="current" spy={true} smooth={true} to='/'>Home</NavLink></li> */}
-      <li><img className="lh-logo" alt="livelyhood icon" src={LHBorderless}></img></li>
-      <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
-      <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
-      <li><Link exact className="current" spy={true} smooth={true} to='cards'>Cards</Link></li>
-      <li><Link exact className="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
-      <li><img className="hamburger-logo" alt="hamburger" icon src={Hamburger}></img></li>
-    </ul>
-  </nav>
+      <nav>
+        <ul>
+          {/* <li><Link exact activeclassname="current" spy={true} smooth={true} to='/'>Home</Link></li> */}
+          <img className="lh-logo" alt="livelyhoodIcon" src={LHBorderless}></img>
+          <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
+          <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
+          <li><Link exact className="current" spy={true} smooth={true} to='cards-title'>Cards</Link></li>
+          <li><Link exact className="current" spy={true} smooth={true} to='map-space'>Map</Link></li>
+          <img className="hamburger-logo" alt="hamburger" icon src={Hamburger}></img>
+        </ul>
+      </nav>
 );
 
 // This is code for Routing content in the 'main' section with a click function from the Navbar. 

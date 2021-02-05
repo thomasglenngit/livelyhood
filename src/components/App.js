@@ -123,7 +123,7 @@ export class App extends React.Component {
         
         <div id="cards-page">
           <h1 className="cards-title" >Welcome To Your Neighborhood!</h1>
-          <h3 >Click on any card to edit/delete.</h3>
+          <h3 className="cards-subtitle">Click on any card to edit/delete.</h3>
           <h2>
 
             {/* Current Page is{' '} */}
@@ -139,7 +139,7 @@ export class App extends React.Component {
                 </Route>
               </Switch> */}
           </h2>
-          <div id="cards">
+          <div id="cards-area">
             {displayComponent}
           </div>
 

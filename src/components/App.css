@@ -16,25 +16,25 @@ html {
   padding: 20px;
 }
 
+
 nav ul {
   position: fixed;
   width: 100%;
   list-style: none;
-  /* display: inline-flex; */
-  background-color: #739CA1;
+  display: inline-flex;
   padding: 0px 30px 0px 20px;
-  align-items: baseline;
+  background-color: rgb(128, 128, 128, 0.5);
   justify-content: flex-end;
   margin-bottom: 0px;
   z-index: 2;
 }
 
-nav ul li {
+nav li {
   padding: 20px;
   display: inline;
   color: white;
   text-decoration: none;
-  justify-items: start;
+  
 }
 
 .current {
@@ -52,12 +52,14 @@ nav ul li {
   height: 70px;
   width: 90px;
   color: #FBFB6A;
-  margin-right: 600px;
+  position: absolute;
+  left: 3%;
 }
 
 .hamburger-logo {
   height: 70px;
   width: 90px;
+  
 }
 
 h1 {
@@ -91,19 +93,25 @@ width: 200px;
 }
 
 #cards-page {
-  background-color: #8B7513;
-}
-
-#cards {
-  padding-inline: 200px
+  background-color: #90c5cd;
+  color: white;
 }
 
 .cards-title {
-  padding-inline: 180px;
+  padding: 50px 180px 20px 180px;
+  text-align: center;
   font-weight: bolder;
   font-size: 60px;
 }
 
+.cards-subtitle {
+  padding-inline: 200px;
+  text-align: center;
+}
+
+#cards-area {
+  padding: 60px 200px 80px 200px;
+}
 
 /* color palette
 {
