@@ -71,7 +71,7 @@ p {
 }
 
 .page-about {
-  padding: 50px 150px 100px 150px;
+  padding: 50px 10% 100px 10%;
   font-weight: bold;
   font-size: 20px;
 }
@@ -81,9 +81,9 @@ p {
   font-size: 60px;
 }
 
-.invite-content {
-  padding-inline: 60px;
-}
+/* .invite-content {
+  padding-inline: 20%;
+} */
 
 #volunteer-button {
 align-content: flex-end;

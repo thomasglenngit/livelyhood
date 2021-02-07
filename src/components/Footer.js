@@ -1,18 +1,19 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-export const Footer = () => {
-  const footerStyle = {
-    fontFamily: 'sans-serif',
-    textAlign: 'center',
-    backgroundColor: 'gold',
-    paddingTop: '5px',
-    paddingBottom: '5px',
+const footerStyle = {
+  fontFamily: 'sans-serif',
+  textAlign: 'center',
+  backgroundColor: 'gold',
+  paddingTop: '5px',
+  paddingBottom: '5px',
 
-  }
-  const h1Footer = {
-    fontWeight: 'bold'
-  }
+}
+const h1Footer = {
+  fontWeight: 'bold'
+}
+
+const Footer = () => {
   render() ;
     return (
       <React.Fragment>

@@ -107,7 +107,7 @@ hello
  https://medium.com/how-to-react/scroll-to-an-element-on-click-in-react-js-8424e478bb9
 7. Router function tutorial found at: 
 https://blog.pusher.com/getting-started-with-react-router-v4/
-
+8. Instructional Section: Video/
 
 
 <img src="src/images/Good_Vibes.gif" style="float: left; margin-right: 10px;" />

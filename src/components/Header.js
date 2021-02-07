@@ -22,12 +22,6 @@ function Header() {
     height: 'auto'
   }
 
-
-
-
-
-
-
   return (
     <React.Fragment>
       <div className="page-header" style={headerStyle} >
