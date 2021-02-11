@@ -1,8 +1,6 @@
 import React from "react";
 import livelihood from '../images/livelihood.png';
 import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import './App.css'
 
@@ -30,9 +28,6 @@ function Header() {
           style={img}
         >
         </Image>
-
-
-
       </div>
 
     </React.Fragment>
