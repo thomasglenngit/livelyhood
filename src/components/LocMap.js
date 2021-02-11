@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+// import NeighborDetails  from './NeighborDetails'
 
 const mapStyles = {
   map: {
-    position: 'absolute',
+    position: 'relative',
     width: '100%',
     height: '100%'
   }
 };
 
-
 export class CurrentLocation extends React.Component {
   constructor(props) {
     super(props);
+
+    // useFirestoreConnect([
+    //     { collection: 'neighbors' }
+    //   ]);
+    
+    // const volunteerLocation = props.firestore.data.neighbors[props.displayStateReducer.selectedNeighbor.geolocation];
 
     const { lat, lng } = this.props.initialCenter;
 
@@ -22,16 +29,19 @@ export class CurrentLocation extends React.Component {
         lng: lng
       }
     };
+
     CurrentLocation.defaultProps = {
       zoom: 14,
       initialCenter: {
         lat: -1.2884,
         lng: 36.8233
       },
+      //volunteer center
       centerAroundCurrentLocation: false,
       visible: true
     };
   }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.google !== this.props.google) {
       this.loadMap();
@@ -40,6 +50,7 @@ export class CurrentLocation extends React.Component {
       this.recenterMap();
     }
   }
+
   recenterMap() {
     const map = this.map;
     const current = this.state.currentLocation;
@@ -79,6 +90,7 @@ export class CurrentLocation extends React.Component {
       this.map = new maps.Map(node, mapConfig);
     }
   }
+
   componentDidMount() {
     if (this.props.centerAroundCurrentLocation) {
       if (navigator && navigator.geolocation) {

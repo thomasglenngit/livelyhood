@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 // import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
 import './Cards/card-style.css'
 
 function NeighborDetails(props) {
@@ -44,21 +42,6 @@ function NeighborDetails(props) {
           </div>
         </div>
         <br />
-        {/* <Card border="info" style={{ fontSize: '10px', width: '400px', margin: '20px' }}>
-            <Card.Body style={{ fontSize: '15px' }}>
-              <h1><strong>Neighbor Details</strong></h1>
-              <h3><strong>Name: </strong> {thisNeighbor.name} </h3>
-              <hr />
-              <h3><strong>Address: </strong> {thisNeighbor.address}</h3>
-              <h3><strong>City: </strong> {thisNeighbor.city}</h3>
-              <h3><strong>Email: </strong>{thisNeighbor.email}</h3>
-              <h3><strong>Tools: </strong> {thisNeighbor.tools}</h3>
-              <hr />
-              <button className="btn btn-info" style={{ marginRight: '20px' }} onClick={() => props.onClickingEdit(props.displayStateReducer.selectedNeighbor)}>Update Neighbor Info</button>
-              <button className="btn btn-danger" onClick={() => props.onClickingDelete(props.displayStateReducer.selectedNeighbor)}>Delete Neighbor</button>
-              <hr />
-            </Card.Body>
-          </Card> */}
       </React.Fragment>
     )
   } else if (thisNeighbor && formSubmitted) {

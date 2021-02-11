@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-// import CurrentLocation from './LocMap';
-import CardColumns from 'react-bootstrap/CardColumns';
+import CurrentLocation from './LocMap';
+
 
 const mapStyles = {
   width: '100%',
@@ -15,7 +15,7 @@ export class MapContainer extends Component {
     selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
   };
 
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker, e) => // clicking on an EXISTING MARKER
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -33,7 +33,6 @@ export class MapContainer extends Component {
 
   render() {
     return (
-      <CardColumns>
         <Map
           google={this.props.google}
           zoom={14}
@@ -47,7 +46,7 @@ export class MapContainer extends Component {
         >
           <Marker
             onClick={this.onMarkerClick}
-            name={'Portland'}
+            name={'Portland'} //name and message of volunteer
           />
           <InfoWindow
             marker={this.state.activeMarker}
@@ -59,7 +58,6 @@ export class MapContainer extends Component {
             </div>
           </InfoWindow>
         </Map>
-      </CardColumns>
     );
   }
 }
