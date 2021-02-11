@@ -15,11 +15,11 @@ export class CurrentLocation extends React.Component {
   constructor(props) {
     super(props);
 
-    useFirestoreConnect([
-        { collection: 'neighbors' }
-      ]);
+    // useFirestoreConnect([
+    //     { collection: 'neighbors' }
+    //   ]);
     
-    const volunteerLocation = props.firestore.data.neighbors[props.displayStateReducer.selectedNeighbor.geolocation];
+    // const volunteerLocation = props.firestore.data.neighbors[props.displayStateReducer.selectedNeighbor.geolocation];
 
     const { lat, lng } = this.props.initialCenter;
 
