@@ -22,7 +22,8 @@ function Neighbor(props) {
             <p><strong>Email:</strong>   {props.email}</p>
             <p><strong>Tools:</strong>   {props.tools}</p>
           </div>
-          <a className="btn btn-outline-success" onClick={() => props.whenNeighborClicked(props.id)}>Edit Details</a>
+          <div className="btn btn-outline-success" onClick={() => props.whenNeighborClicked(props.id)}>Edit Details</div>
+          <div className="btn btn-outline-info" onClick={() => props.whenLocationClicked(props.id)}>Locate</div>
         </div>
       </div>
 
@@ -44,6 +45,7 @@ function Neighbor(props) {
 
 Neighbor.propTypes = {
   whenNeighborClicked: PropTypes.func,
+  whenLocationClicked: PropTypes.func,
   thisNeighbor: PropTypes.object,
   name: PropTypes.string,
   address: PropTypes.string,
