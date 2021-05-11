@@ -27,7 +27,9 @@ function Header() {
           src={livelihood}
           style={img}
         >
+          
         </Image>
+        
       </div>
 
     </React.Fragment>

@@ -11,8 +11,9 @@ import './App.css'
 export const Navigation = () => (
       <nav>
         <ul>
-          {/* <li><Link exact activeclassname="current" spy={true} smooth={true} to='/'>Home</Link></li> */}
+          
           <img className="lh-logo" alt="livelyhoodIcon" src={LHBorderless}></img>
+          <li><Link exact classname="current" spy={true} smooth={true} to='/'>Home</Link></li>
           <li><Link exact className="current" spy={true} smooth={true} to='about'>About</Link></li>
           <li><Link exact className="current" spy={true} smooth={true} to='contact'>Contact</Link></li>
           <li><Link exact className="current" spy={true} smooth={true} to='cards-title'>Cards</Link></li>
