@@ -30,7 +30,10 @@ function NeighborList(props) {
                 email={neighbor.email}
                 tools={neighbor.tools}
                 id={neighbor.id}
-                key={neighbor.id} />
+                key={neighbor.id} 
+                               
+                />
+                
             })}
           </CardColumns>
         </Row>

@@ -14,10 +14,6 @@ import DeleteConfirm from './DeleteConfirm';
 import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import About from './About'
-// import CardColumns from 'react-bootstrap/CardColumns';
-// import Card from 'react-bootstrap/Card';
-// import { Cards } from '../components/Cards/Cards';
-// import { Card } from '../components/Cards/CardUI';
 import MapContainer from './Loc';
 // import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
