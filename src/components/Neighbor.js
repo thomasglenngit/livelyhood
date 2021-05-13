@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import axios from 'axios'
 import { Link } from 'react-scroll'
-import { Map, Marker, InfoWindow } from './Loc'
+import Loc from './Loc'
 import LocMap from './LocMap'
 import { Card } from 'react-bootstrap';
 import './Cards/card-style.css';
@@ -56,7 +56,7 @@ const Neighbor = props => {
             <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
           </ul>
         `;
-  
+        return geometryOutput
         // Output to app
         document.getElementById('formatted-address').innerHTML = formattedAddressOutput;
         document.getElementById('address-components').innerHTML = addressComponentsOutput;
@@ -65,6 +65,7 @@ const Neighbor = props => {
       .catch(function (error) {
         console.log(error);
       });
+    
   
   }
 
@@ -86,7 +87,8 @@ const Neighbor = props => {
         </div>
         <div className="btn btn-outline-success" onClick={() => props.whenNeighborClicked(props.id)}>Edit Details</div>
         <Link to="map-space"><div className="btn btn-outline-info">
-          {geoCodeTranslate()}
+          {/* {geoCodeTranslate()} */}
+          {Map.panTo(geoCodeTranslate(props.address))}
           Locate</div></Link>
       </div>
     </React.Fragment>
