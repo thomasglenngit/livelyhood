@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import axios from 'axios'
 import { Link } from 'react-scroll'
+import { Map, Marker, InfoWindow } from './Loc'
+import LocMap from './LocMap'
 import { Card } from 'react-bootstrap';
 import './Cards/card-style.css';
 import './App.css'
