@@ -10,6 +10,8 @@ const mapStyles = {
   height: '100%'
 };
 
+
+
 export class MapContainer extends Component {
   state = {
     showingInfoWindow: false,  // Hides or shows the InfoWindow
@@ -17,6 +19,7 @@ export class MapContainer extends Component {
     selectedPlace: {},          // Shows the InfoWindow to the selected place upon a marker
     neighborPlace: {}
   };
+
 
 
   onMarkerClick = (props, marker, e) => // clicking on an EXISTING MARKER
@@ -36,6 +39,8 @@ export class MapContainer extends Component {
   };
 
   render() {
+    const recenterLat = 51.151888 
+    const recenterLng = -114.216104
     return (
         <Map
           google={this.props.google}
@@ -43,10 +48,9 @@ export class MapContainer extends Component {
           style={mapStyles}
           initialCenter={
             {
-              lat: `${Neighbor.lat}`,
-              lng: `${Neighbor.lng}`
-              // lat: 45.5051,
-              // lng: -122.6750
+            //place raw coordinates here:
+              lat: recenterLat,
+              lng: recenterLng
             }
           }
         >

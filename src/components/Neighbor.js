@@ -13,8 +13,8 @@ const Neighbor = props => {
 
   const geoCodeTranslate = () => {
 
-    const location = `${Neighbor.address}`
-  
+    const location = props.address
+  console.log(props.address)
     // document.getElementById('location-input').value;
   
     axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
