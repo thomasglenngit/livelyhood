@@ -30,3 +30,7 @@ export const deleteNeighbor = (id) => ({
   selectedNeighbor: id
 });
 
+// export const locateNeighbor = (id) => {
+  
+  
+// }

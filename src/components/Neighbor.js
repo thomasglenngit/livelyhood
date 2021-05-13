@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import { locationChange } from './Loc'
 import { Link } from 'react-scroll'
 import { Card } from 'react-bootstrap';
 import './Cards/card-style.css';
 import './App.css'
 // import { CardDeck } from 'react-bootstrap';
 
-function Neighbor(props) {
+
+const Neighbor = props => {
   return (
     <React.Fragment>
       {/* <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />

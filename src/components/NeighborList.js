@@ -9,7 +9,6 @@ import  { Row } from 'react-bootstrap';
 
 function NeighborList(props) {
 
-
   useFirestoreConnect([
     { collection: 'neighbors' }
   ]);
